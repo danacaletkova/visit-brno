@@ -5,6 +5,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #fff;
   background: var(--main-color);
 }
 
@@ -13,17 +15,27 @@ body {
   margin: 0 auto;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr 3fr;
+  grid-gap: 10px;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 header {
   background-image: linear-gradient(
       rgba(39, 32, 68, 0.8),
       rgba(39, 32, 68, 0.4)
     ),
-    url("/images/brno-bg.jpg");
+    url("/images/brno-header.jpg");
 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  color: #fff;
   text-align: center;
   padding: 220px 0;
 }
@@ -63,6 +75,47 @@ header a {
   padding: 16px 32px;
   display: inline-block;
   margin: 32px;
+}
+
+footer {
+  background-image: linear-gradient(
+      rgba(39, 32, 68, 0.8),
+      rgba(39, 32, 68, 0.8)
+    ),
+    url("/images/brno-footer.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+}
+
+footer h4 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0;
+}
+
+footer p {
+  opacity: 0.8;
+  margin-right: 20px;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer li {
+  list-style: none;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer .opaque {
+  opacity: 0.8;
 }
 
 @media (max-width: 900px) {
