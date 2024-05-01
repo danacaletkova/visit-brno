@@ -1,3 +1,89 @@
-h1 {
+:root {
+  --main-color: rgba(39, 32, 68, 1);
+  --link-color: rgba(70, 44, 178, 1);
+}
+
+body {
   font-family: "Poppins", sans-serif;
+  background: var(--main-color);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+header {
+  background-image: linear-gradient(
+      rgba(39, 32, 68, 0.8),
+      rgba(39, 32, 68, 0.4)
+    ),
+    url("/images/brno-bg.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  color: #fff;
+  text-align: center;
+  padding: 220px 0;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 1;
+  margin: 0;
+  padding: 30px 10px;
+}
+
+header h2 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+header h3 {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+header a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--main-color);
+  background-color: #fff;
+  padding: 16px 32px;
+  display: inline-block;
+  margin: 32px;
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 120px 0;
+  }
+
+  header h1 {
+    font-size: 48px;
+    padding: 20px 10px;
+  }
+  header h2 {
+    font-size: 20px;
+  }
+
+  header h3 {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  header a {
+    font-size: 12px;
+  }
 }
