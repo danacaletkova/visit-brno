@@ -1,16 +1,16 @@
 :root {
   --main-color: rgba(39, 32, 68, 1);
-  --link-color: rgba(70, 44, 178, 1);
 }
 
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   background: var(--main-color);
+  margin: 0;
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -38,9 +38,12 @@ body {
   object-fit: cover;
 }
 
+.img-card {
+  width: 100%;
+}
+
 .card {
   background-color: #fff;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .card-header {
@@ -57,9 +60,9 @@ body {
   display: block;
   text-align: center;
   color: #fff;
-  background-color: var(--link-color);
+  background-color: rgba(70, 44, 178, 1);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 3px;
   text-transform: uppercase;
   padding: 16px;
@@ -79,7 +82,7 @@ body {
 }
 
 section {
-  padding: 80px 120px;
+  padding: 60px 120px;
 }
 
 section.places {
@@ -92,12 +95,10 @@ header {
       rgba(39, 32, 68, 0.4)
     ),
     url("/images/brno-header.jpg");
-
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   color: #fff;
-
   text-align: center;
   padding: 220px 0;
 }
@@ -106,15 +107,15 @@ header h1 {
   font-weight: 700;
   font-size: 96px;
   line-height: 1;
-  margin: 0;
+  margin: 0 20px;
   padding: 30px 10px;
 }
 
 header h2 {
   font-weight: 400;
-  font-size: 40px;
+  font-size: 38px;
   line-height: 1.5;
-  margin: 0;
+  margin: 0 20px;
 }
 
 header h3 {
@@ -162,7 +163,7 @@ main h3 {
 
 main h5 {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   margin: 0;
 }
 
@@ -176,6 +177,7 @@ main h6 {
 main p {
   opacity: 0.7;
   line-height: 1.5;
+  text-align: justify;
 }
 
 footer {
@@ -184,7 +186,6 @@ footer {
       rgba(39, 32, 68, 0.8)
     ),
     url("/images/brno-footer.jpg");
-
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -199,6 +200,7 @@ footer h4 {
 }
 
 footer p {
+  font-size: 14px;
   opacity: 0.8;
 }
 
@@ -207,6 +209,7 @@ footer ul {
 }
 
 footer li {
+  font-size: 14px;
   list-style: none;
 }
 
@@ -219,14 +222,18 @@ footer .opaque {
 }
 
 @media (max-width: 900px) {
+  section {
+    padding: 30px;
+  }
+
   header {
-    padding: 120px 0;
+    padding: 60px 0;
   }
 
   header h1 {
     font-size: 48px;
-    padding: 20px 10px;
   }
+
   header h2 {
     font-size: 20px;
   }
@@ -240,15 +247,33 @@ footer .opaque {
     font-size: 12px;
   }
 
-  section {
-    padding: 30px;
+  .img-responsive {
+    display: none;
+  }
+
+  main h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  main h3 {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  main p {
+    font-size: 14px;
+  }
+
+  footer p {
+    margin-bottom: 0;
   }
 
   .grid {
     grid-template-columns: 1fr;
   }
 
-  .card .img-responsive,
+  .img-card,
   .card .embed {
     aspect-ratio: 16/9;
   }
