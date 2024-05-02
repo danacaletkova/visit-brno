@@ -16,7 +16,7 @@ body {
 
 .grid {
   display: grid;
-  grid-gap: 64px;
+  grid-gap: 30px;
 }
 
 .grid-2-col {
@@ -25,6 +25,7 @@ body {
 
 .grid-3-col {
   grid-template-columns: repeat(3, 1fr);
+  margin-top: 30px;
 }
 
 .grid-footer {
@@ -38,7 +39,6 @@ body {
 }
 
 .card {
-  margin: 30px 0;
   background-color: #fff;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -70,17 +70,20 @@ body {
   aspect-ratio: 1 / 1;
 }
 
+.gallery {
+  margin-top: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
 section {
   padding: 80px 120px;
 }
 
 section.places {
   background-color: #f8f8f8;
-}
-
-section.places h2,
-section.places h3 {
-  text-align: center;
 }
 
 header {
@@ -244,8 +247,9 @@ footer .opaque {
   .grid {
     grid-template-columns: 1fr;
   }
-}
 
-.card .img-responsive, .card .embed {
-  aspect-ratio: 16/9;
+  .card .img-responsive,
+  .card .embed {
+    aspect-ratio: 16/9;
+  }
 }
